@@ -12,7 +12,7 @@ int main(int argc, char const *argv[]) {
         if (j > low && j < up){
             printf("%ld ",j);
         } else
-        printf("el%ld  ",low + i +1);
+        printf("%ld  ",low + i +1);
     }
     printf("%f\n", clock() - timez);
     return 0;
