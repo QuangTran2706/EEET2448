@@ -27,7 +27,6 @@ void main() {
     //     }
     // }
         //print the input bigger than 5
-
         //find mean
     // float sum = 0, mean;
     // for (int i = 0; i < n; i++) {
