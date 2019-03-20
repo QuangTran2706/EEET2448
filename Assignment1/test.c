@@ -6,7 +6,7 @@ int main(int argc, char const *argv[]) {
     printf("Enter your phone number");
     scanf("%s", phone_number);
     if (phone_number[0] == '-') {
-        //break;
+        \\break;
         return 0;
     }
     unsigned int string_length = strlen(phone_number);
