@@ -20,7 +20,7 @@ int main(int argc, char const *argv[]) {
         //check for program exit condition
         if (phone_number[0] == '-') {
             printf("program exit\n");
-            return 0;
+            break;
         }
         unsigned int string_length = strlen(phone_number);
         //check the length of the phone number

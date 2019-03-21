@@ -17,6 +17,7 @@ int main(int argc, char const *argv[]) {
         char phone_number[11];
         printf("Enter your phone number:");
         scanf("%s", phone_number);
+
         //check for program exit condition
         if (phone_number[0] == '-') {
             printf("program exit\n");
