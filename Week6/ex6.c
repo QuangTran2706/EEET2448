@@ -9,3 +9,7 @@ int main(int argc, char const *argv[]) {
     decimal_to_binary
     return 0;
 }
+
+int decimal_to_binary (int i) {
+    
+}
