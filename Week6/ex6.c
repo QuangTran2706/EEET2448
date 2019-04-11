@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void decimal_to_binary (int number) {
-    int binumber[20];
+    int binumber[32];
     int i = 0;
 
     while (number > 0) {
