@@ -30,7 +30,8 @@ typedef struct {
 } rect;
 
 float rect_area (rect r) {
-    float area = (abs(r.upper_right.x)-abs(r.lower_left.x))*(abs(r.upper_right.y)-abs(r.lower_left.y));
+    float area = (abs(r.upper_right.x) - abs(r.lower_left.x)) *
+                 (abs(r.upper_right.y) - abs(r.lower_left.y));
     return area;
 }
 int main(int argc, char const *argv[]) {
@@ -40,8 +41,10 @@ int main(int argc, char const *argv[]) {
     printf("Enter your coordinate of 2 point:x1 ,y1, x2, y2 = ");
     scanf("%f %f %f %f", &r.lower_left.x, &r.lower_left.y,
                         &r.upper_right.x, &r.upper_right.y);
-    printf("The coordinate of lower left point is: %f %f \n", r.lower_left.x, r.lower_left.y);
-    printf("The coordinate of upper right point is: %f %f \n",r.upper_right.x, r.upper_right.y);
+    printf("The coordinate of lower left point is: %f %f \n", r.lower_left.x,
+                                                              r.lower_left.y);
+    printf("The coordinate of upper right point is: %f %f \n",r.upper_right.x,
+                                                              r.upper_right.y);
     printf("Area of the rectangle is: %f\n", rect_area(r));
     // scanf("%f %f %f %f",&a.x, &a.y, &b.x, &b.y);
     // printf("The distance between two point: %f \n", point_dist(a, b));
