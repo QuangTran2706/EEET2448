@@ -53,40 +53,40 @@ int point_position (point n, rect r) {
 }
 
 int main(int argc, char const *argv[]) {
-    // point a;
-    // point b;
-    // rect r;
-    // point n;
-    // printf("Enter your coordinate of 2 point:x1 ,y1, x2, y2 = ");
-    // scanf("%d %d %d %d", &r.lower_left.x, &r.lower_left.y,
-    //                     &r.upper_right.x, &r.upper_right.y);
-    // printf("The coordinate of lower left point is: %d %d \n", r.lower_left.x,
-    //                                                           r.lower_left.y);
-    // printf("The coordinate of upper right point is: %d %d \n",r.upper_right.x,
-    //                                                           r.upper_right.y);
-    // printf("Area of the rectangle is: %f\n", rect_area(r));
-    // printf("Enter a point:");
-    // scanf("%d %d", &n.x, &n.y);
-    // printf("%d\n", point_position(n, r));
-    // scanf("%f %f %f %f",&a.x, &a.y, &b.x, &b.y);
-    // printf("The distance between two point: %f \n", point_dist(a, b));
-    // printf("Equallity check: %d\n", pointeq(a, b));
+    point a;
+    point b;
+    rect r;
+    point n;
+    printf("Enter your coordinate of 2 point:x1 ,y1, x2, y2 = ");
+    scanf("%d %d %d %d", &r.lower_left.x, &r.lower_left.y,
+                        &r.upper_right.x, &r.upper_right.y);
+    printf("The coordinate of lower left point is: %d %d \n", r.lower_left.x,
+                                                              r.lower_left.y);
+    printf("The coordinate of upper right point is: %d %d \n",r.upper_right.x,
+                                                              r.upper_right.y);
+    printf("Area of the rectangle is: %f\n", rect_area(r));
+    printf("Enter a point:");
+    scanf("%d %d", &n.x, &n.y);
+    printf("%d\n", point_position(n, r));
+    scanf("%f %f %f %f",&a.x, &a.y, &b.x, &b.y);
+    printf("The distance between two point: %f \n", point_dist(a, b));
+    printf("Equallity check: %d\n", pointeq(a, b));
         //11
-    int n;
-    printf("Enter a number of points you want to enter\n");
-    scanf("%d\n", &n);
+    // int n;
+    // printf("Enter a number of points you want to enter\n");
+    // scanf("%d\n", &n);
+    //
+    // point p[n];
+    // if (n < 2) {
+    //     printf("the number of points is too small\n");
+    // } else {
+    //     for (int i = 0; i < n; i++) {
+    //         enter_point(p[i]);
+    //     }
+    // }
 
-    point p[n];
-    if (n < 2) {
-        printf("the number of points is too small\n");
-    } else {
-        for (int i = 0; i < n; i++) {
-            enter_point(p[i]);
-        }
-    }
 
 
-    
 
     return 0;
 }
