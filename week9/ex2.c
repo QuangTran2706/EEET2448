@@ -19,25 +19,25 @@ int main(int argc, char const *argv[]) {
 }
 
  int filecopy(char const *infilename, char const *outfilename) {
-    FILE *fp1 = fopen(infilename, "w");;
-    FILE *fp2 = fopen (outfilename, "w");;
-    char c;
-    char file_content[100];
+    FILE *fp1 = fopen(infilename, "r");
+    FILE *fp2 = fopen (outfilename, "w");
+    char c[100];
+    // char file_content[100];
 
     if (fp1 == NULL || fp2 == NULL) {
         printf("Cannot open the file \n");
         return 0;
     } else {
-        printf("Enter file content:\n");
-        scanf("%s", file_content);
-        fprintf(fp1, "%s", file_content);
+        // printf("Enter file content:\n");
+        // scanf("%s", file_content);
+        // fprintf(fp1, "%s", file_content);
 
-        c = fgetc(fp1);
-        while (c != EOF) {
-            fputc(c, fp2);
-            c = fgetc(fp1);
+        // c = fgetc(fp1);
+        while (fgets(c, 100, fp1)) {
+            fputs(c, fp2);
         }
     }
     fclose(fp1);
     fclose(fp2);
+    return 0;
 }
