@@ -52,61 +52,27 @@ int main(int argc, char const *argv[])
 
 // convert each value of romman character to its correspong decimal value
 int value_of_roman_char(char ch) {
-    if (ch == 'I')
-    {
-        return 1;
-    }
-    else if (ch == 'V')
-    {
-        return 5;
-    }
-    else if (ch == 'X')
-    {
-        return 10;
-    }
-    else if (ch == 'L')
-    {
-        return 50;
-    }
-    else if (ch == 'C')
-    {
-        return 100;
-    }
-    else if (ch == 'D')
-    {
-        return 500;
-    }
-    else if (ch == 'M')
-    {
-        return 1000;
-    }
-    else
-        return -1;
+    if (ch == 'I') return 1;
+    else if (ch == 'V') return 5;
+    else if (ch == 'X') return 10;
+    else if (ch == 'L') return 50;
+    else if (ch == 'C') return 100;
+    else if (ch == 'D') return 500;
+    else if (ch == 'M') return 1000;
+    else return -1;
 }
-//check for valid roman number in the case the charater is 'I' 
+//check for valid roman number in the case the charater is 'I'
 int check_case_I(char s1, char s2) {
     int value_checking = 0;
-        if (s1 == 'V' || s1 == 'X' || s1 == 'I')
-        {
-            value_checking = 1;
-        }
-        else
-        {
-            value_checking = 0;
-        }
+        if (s1 == 'V' || s1 == 'X' || s1 == 'I') value_checking = 1;
+        else value_checking = 0;
     return value_checking;
 }
 //check for valid roman number in the case the charater is 'X'
 int check_case_X(char s1, char s2) {
     int value_checking = 0;
-        if (s1 == 'D' || s1 == 'M' )
-        {
-            value_checking = 0;
-        }
-        else
-        {
-            value_checking = 1;
-        }
+        if (s1 == 'D' || s1 == 'M' ) value_checking = 0;
+        else value_checking = 1;
     return value_checking;
 }
 // check for valid roman number return 1 if the value is right and 0 if the value is wrong
@@ -116,10 +82,9 @@ int check_for_valid_roman(char *ptr) {
     for (char *c = ptr; *c != '\0'; c++)
     {
         s1 = *c;
-        if (s1 == 13 || s1 == '\0') {
-            break; 
-        }
-        else if (s2 == 'I') {
+        if (s1 == '\n') {
+            break;
+        } else if (s2 == 'I') {
             value_checking = check_case_I(s1, s2);
         } else if (s2 == 'X') {
             value_checking = check_case_X(s1, s2);
@@ -136,7 +101,7 @@ int roman_to_decimal(char *p) {
     //initializing the variables to store previous value of roman character
     int previous_value = 100000;
     for (char *c = p; *c != '\0'; c++) {
-        if (*c == 13) break; 
+        if (*c == '\n') break;
         int current_value = value_of_roman_char(*c);
         // check for subtraction notation in roman numerals
         if (current_value > previous_value) {
